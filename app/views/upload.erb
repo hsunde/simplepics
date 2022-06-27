@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<script src='/scripts/upload.js'></script>
+	</head>
+
+	<body>
+		<input type="checkbox" id="upload_sequence" name="upload_sequence" value="false">
+		<label for="upload_sequence">Sequence</label>
+		<input id="upload_tags" type="text" name="upload_tags" placeholder="tags">				
+
+		<label id="upload" class="button_wrapper">
+			<input type="file" name="files" accept="image/*,video/*" multiple onchange="SIMPLEPICS.upload(this)">
+			<%# <span class="button">upload</span> %>
+		</label>
+	</body>
+</html>

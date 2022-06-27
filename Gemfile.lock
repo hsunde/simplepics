@@ -1,0 +1,74 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    bcrypt (3.1.18)
+    date (3.2.2)
+    fastimage (2.2.6)
+    fileutils (1.6.0)
+    json (2.6.2)
+    mimemagic (0.4.3)
+      nokogiri (~> 1)
+      rake
+    multi_json (1.15.0)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
+    nokogiri (1.13.6-x86_64-darwin)
+      racc (~> 1.4)
+    open-uri (0.2.0)
+      stringio
+      time
+      uri
+    pp (0.3.0)
+      prettyprint
+    prettyprint (0.1.1)
+    puma (5.6.4)
+      nio4r (~> 2.0)
+    racc (1.6.0)
+    rack (2.2.3.1)
+    rack-protection (2.2.0)
+      rack
+    rake (13.0.6)
+    require_all (3.0.0)
+    ruby2_keywords (0.0.5)
+    securerandom (0.2.0)
+    sequel (5.57.0)
+    sinatra (2.2.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.2.0)
+      tilt (~> 2.0)
+    sinatra-contrib (2.2.0)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.2.0)
+      sinatra (= 2.2.0)
+      tilt (~> 2.0)
+    sqlite3 (1.4.4)
+    stringio (3.0.2)
+    tilt (2.0.10)
+    time (0.2.0)
+      date
+    uri (0.11.0)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  bcrypt
+  fastimage
+  fileutils
+  json
+  mimemagic
+  open-uri
+  pp
+  puma
+  require_all
+  securerandom
+  sequel
+  sinatra
+  sinatra-contrib
+  sqlite3
+
+BUNDLED WITH
+   2.3.10

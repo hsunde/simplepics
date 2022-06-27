@@ -1,0 +1,7 @@
+#control {
+	color: white;
+	display: flex;
+	padding:  12px;
+	gap:  12px;
+	align-items: center;
+}

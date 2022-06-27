@@ -1,0 +1,23 @@
+main {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	/* background-color: green; */
+}
+
+.content {
+	height: 100%;
+	position: relative;
+}
+
+.media {
+	position: relative;
+}
+
+img, video {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}

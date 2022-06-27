@@ -1,0 +1,21 @@
+#pagination_wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	width:  100%;
+}
+
+#pagination_wrapper article {
+	color:  black;
+	background-color: lightgrey;
+	padding:  6px 18px 6px 18px;
+	margin:  3px;
+	border-radius: 100px;
+}
+
+#pagination_wrapper article.active {
+	color:  white;
+	background-color: dodgerblue;
+}

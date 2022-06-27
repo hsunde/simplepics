@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/stylesheets/css.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/manage.css" />
+		<script src='/scripts/manage.js'></script>
+	</head>
+
+	<body>
+		<section id='filter'>
+			<% @tags.each do |category, tags| %>
+				<section class='tagCategory'>
+					<div class='header'><%= category %></div>
+					<section class='availableTags'>
+						<% tags.each do |tag| %>
+							<div class='filterTag' tag='<%= tag[:name] %>' onclick='SIMPLEPICS.manage.activate("<%= tag[:name] %>")'><%= tag[:name] %></div>
+						<% end %>
+					</section>
+				</section>
+			<% end %>		
+		</section>
+
+		<article class='form'>
+			<form tag='' action='' onsubmit='SIMPLEPICS.manage.change(this)'>
+				<input type='text' placeholder="tag"/>
+				<input type="submit" value="Change"/>
+			</form>
+		</article>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+#modal {
+	width: 100%;
+	height: calc(100%);
+	background-color: rgba(0,0,0,0.8);
+	-webkit-backdrop-filter: blur(30px);
+	position: fixed;
+	top: 0px;
+	z-index: 100;
+	touch-action: none;
+	object-fit: contain;
+}
+
+#modal img, video {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
