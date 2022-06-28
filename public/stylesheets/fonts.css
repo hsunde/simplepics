@@ -1,0 +1,43 @@
+@font-face{
+	font-family: "SF-Pro-Rounded-Bold";
+	src: url('../assets/fonts/SF-Pro-Rounded-Bold_r.otf');
+}
+
+@font-face{
+	font-family: "SF-Pro-Display-Regular";
+	src: url('../assets/fonts/SF-Pro-Display-Regular_r.otf');
+}
+
+@font-face{
+	font-family: "SF-Pro-Display-RegularItalic";
+	src: url('../assets/fonts/SF-Pro-Display-RegularItalic_r.otf');
+}
+
+@font-face{
+	font-family: "SF-Pro-Display-Semibold";
+	src: url('../assets/fonts/SF-Pro-Display-Semibold_r.otf');
+}
+
+.rounded-bold {
+    font-family: "SF-Pro-Rounded-Bold";
+}
+
+.semibold {
+    font-family: "SF-Pro-Display-Semibold";
+}
+
+.f24 {
+    font-size: 24px;
+}
+
+.f22 {
+    font-size: 22px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.bold {
+    font-weight: bold;
+}

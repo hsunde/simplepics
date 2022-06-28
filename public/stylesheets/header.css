@@ -1,0 +1,14 @@
+header {
+	background-color: rgb(220, 220, 220);
+	color: rgb(40, 40, 40);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+	padding: 20px;
+}
+
+header #user_control .button:not(:last-child) {
+    margin-right: 6px;
+}
