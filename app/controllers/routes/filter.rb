@@ -12,12 +12,8 @@ class Simplepics < Sinatra::Base
 			active[operator.to_sym] << tag
 		end
 
-		@categories = get_categories()	
-
 		session[:filter].active = active
 		session[:filter].get()
-		@count = session[:filter].filtered_photos.length
-		@pages = (@count/VIEW_LIMIT.to_f).ceil
 
 		return session[:filter].filtered_photos.to_json
 	end
