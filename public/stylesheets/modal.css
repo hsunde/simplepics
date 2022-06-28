@@ -1,7 +1,8 @@
-#modal {
+.modal {
 	width: 100%;
 	height: calc(100%);
 	background-color: rgba(0,0,0,0.8);
+	backdrop-filter: blur(30px);
 	-webkit-backdrop-filter: blur(30px);
 	position: fixed;
 	top: 0px;
@@ -10,7 +11,7 @@
 	object-fit: contain;
 }
 
-#modal img, video {
+.modal__media {
 	height: 100%;
 	width: 100%;
 	object-fit: contain;

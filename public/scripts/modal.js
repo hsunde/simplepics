@@ -1,11 +1,12 @@
+"use strict";
+
 class Modal extends React.Component {
     constructor(props) {
-        super(props)
-        this.handleHideFullscreen = this.handleHideFullscreen.bind(this)
+        super(props);
     }
 
     handleHideFullscreen(e) {
-        this.props.onHideFullscreen(e)
+        this.props.onHideFullscreen(e);
     }
 
     render() {
@@ -14,10 +15,10 @@ class Modal extends React.Component {
         }
 
         return (
-            <div id="modal" onClick={() => this.handleHideFullscreen(this)}>
-                <img src={"get/" + this.props.src}></img>
-                <video autoPlay muted loop playsInline></video>
+            <div className="modal" onClick={() => this.handleHideFullscreen()}>
+                <img className="modal__media" src={"get/" + this.props.src}></img>
+                <video className="modal__media" autoPlay muted loop playsInline></video>
             </div>
-        )
+        );
     }
 }

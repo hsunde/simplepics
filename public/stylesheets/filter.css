@@ -1,177 +1,77 @@
-nav {
+.filter-wrapper {
 	background-color: white;
 	padding: 30px;
 }
 
-nav section {
-
-	/*display: flex;*/
-
-}
-
-
-nav #current_filters {
-
-	font-family: "SF-Pro-Display-RegularItalic";
-	font-size: 18pt;
-	margin-bottom: 12px;
-
-	cursor: default;
-
-}
-
-nav #current_filters .prefix {
-
-	/*background-color: lightgrey;*/
-	/*padding: 4px 8px 4px 16px;*/
-	border-radius: 100px 0 0 100px;
-
-}
-
-
-
-nav #current_filters .filter {
-
-	cursor: pointer;
-
-	color: dodgerblue;
-
-	/*background-color: lightgrey;*/
-	/*padding: 4px 8px 4px 8px;*/
-	/*border-radius: 0 100px 100px 0px;*/
-
-	/*cursor: default;*/
-
-	pointer-events: none;
-}
-
-nav #current_filters .filter.filter--noprefix {
-
-	/*background-color: lightgrey;*/
-	/*padding: 4px 8px 4px 16px;*/
-	/*border-radius: 100px 0 0 100px;*/
-
-	/*cursor: default;*/
-
-	/*pointer-events: none;*/
-}
-
-nav #current_filters .filter.filter--nocancel {
-
-	/*background-color: lightgrey;*/
-	/*padding: 4px 16px 4px 16px;*/
-	border-radius: 100px;
-
-	/*cursor: default;*/
-
-	/*pointer-events: none;*/
-}
-
-nav #current_filters .filter.active {
-
-	pointer-events: auto;
-	/*cursor: pointer;*/
-	/*background-color: dodgerblue;*/
-
-}
-
-nav #current_filters .remove {
-
-	display: none;
-
-	/*background-color: lightgrey;*/
-	/*padding: 4px 16px 4px 8px;*/
-	border-radius: 0 100px 100px 0;
-
+.active-filter {
+	font-size: 20px;
 	cursor: pointer;
 }
 
-
-nav #filter {
-
-	margin-left: 12px;
-
-	/*display: flex;*/
-
-	/*margin-bottom: 80px;*/
-
-}
-
-.tagCategory {
-	display: flex;
-	align-items: start;
-	align-content: flex-start;
-}
-
-.tagCategory .header {
-	padding: 6px;
-	font-weight: bold;
+.active-filter:not(:last-child) {
 	margin-right: 6px;
 }
 
-.availableTags {
-
-	display: flex;
-	width: 100%;
-	flex-wrap: wrap;
+.active-filter__operator {
+	font-style: italic;
 }
 
-.filterTag {
-
-	padding: 6px;
-	cursor: pointer;
+.active-filter__tag {
+	font-weight: bold;
 }
 
-.filterTag:hover {
-
-	color: dodgerblue;
-}
-
-.filterTag.active {
-
-	color: dodgerblue;
-	opacity: 0.5;
-	cursor: default;
-	pointer-events: none;
-
-}
-
-
-
-.operators {
-
-	width: 130px;
+.filter-operator-wrapper {
+	width: 170px;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	background-color: rgb(230, 230, 230);
 	border-radius: 100px;
 
-	margin-bottom: 12px;
-	/*display: none;*/
-
+	margin-top: 8px;
+	margin-bottom: 8px;
 }
 
-.operators section {
-
-	display: inline-block;
-	background-color: grey;
-}
-
-.operators div {
-
-	/*background-color: rgb(150, 150, 150);*/
-	display: inline-block;
-	padding: 6px 12px 6px 12px;
-	/*box-sizing: border-box;*/
+.filter-operator {
+	padding: 8px 16px 8px 16px;
 	border-radius: 100px;
-	/*font-weight: */
-
-
+	cursor: pointer;
 }
 
-.operators div.active {
-
+.filter-operator--active {
 	background-color: dodgerblue;
 	color: white;
 }
+
+.filter-tag-wrapper {
+	display: flex;
+	align-items: start;
+	align-content: flex-start;
+}
+
+.filter-tag {
+	padding: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+}
+
+.filter-tag:hover {
+	color: dodgerblue;
+}
+
+.filter-tag--active {
+	color: dodgerblue;
+	opacity: 0.5;
+	cursor: default;
+	pointer-events: none;	
+}
+
+.filter-tag--header {
+	font-weight: bold;
+	cursor: default;
+}
+
+.filter-tag--header:hover {
+	color: black;
+}
+

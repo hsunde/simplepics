@@ -1,4 +1,4 @@
-header {
+.header {
 	background-color: rgb(220, 220, 220);
 	color: rgb(40, 40, 40);
 
@@ -7,8 +7,17 @@ header {
     align-items: center;
     
 	padding: 20px;
+    font-family: "SF-Pro-Display-Semibold";
 }
 
-header #user_control a:not(:last-child) {
+.header__logo {
+    font-size: 22px;
+}
+
+.header__button {
+    font-size: 18px;
+}
+
+.header__button:not(:last-child) {
     margin-right: 6px;
 }

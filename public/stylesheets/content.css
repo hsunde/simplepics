@@ -1,10 +1,11 @@
-main {
+.content-wrapper {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	/* background-color: green; */
+	background-color: black;
+	margin-bottom: 20px;
 }
 
 .content {
@@ -12,11 +13,11 @@ main {
 	position: relative;
 }
 
-.media {
+/* .content__media-wrapper {
 	position: relative;
-}
+} */
 
-img, video {
+.content__media {
 	display: block;
 	width: 100%;
 	cursor: pointer;

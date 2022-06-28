@@ -1,28 +1,30 @@
+"use strict";
+
 class HeaderUserControl extends React.Component {
     render() {
         if (this.props.user) {
             return [
-                <a key="upload" href="/upload">Upload</a>,
-                <a key="user" href={"/user/" + this.props.user}>{this.props.user}</a>,
-                <a key="logout" href="/logout">Log out</a>
-            ]
+                <a key="upload" className="header__button" href="/upload">Upload</a>,
+                <a key="user" className="header__button" href={"/user/" + this.props.user}>{this.props.user}</a>,
+                <a key="logout" className="header__button" href="/logout">Log out</a>
+            ];
         }
 
         return (
-            <a href="/login">Login</a>
-        )
+            <a className="header__button" href="/login">Login</a>
+        );
     }
 }
 
 class Header extends React.Component {
     render() {
         return (
-            <header>
-                <div className="f24 semibold">Simplepics</div>
-                <div id="user_control" className="f18 semibold">
+            <header className="header">
+                <div className="header__logo">Simplepics</div>
+                <div className="header__user-control">
                     <HeaderUserControl user={this.props.user} />
                 </div>
             </header>
-        )
+        );
     }
 }
