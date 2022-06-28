@@ -16,22 +16,9 @@
 	</head>
 
 	<body>
-		<header>
-			<div id="logo">Simplepics</div>
-			<div id="usercontrol">
-				<% if user_loggedin? %>
-					<a href="/upload">Upload</a>
-					<a href="/user/<%= session[:user].username %>"><%= session[:user].username %></a>
-					<a href="/logout">Log out</a>
-				<% else %>
-					<a href="/login">Login</a>
-					<a href="/signup">Sign up</a>
-				<% end %>
-			</div>
-		</header>
-
 		<div id="root"></div>
 
+		<script src="/scripts/header.js" type="text/babel"></script>
 		<script src="/scripts/modal.js" type="text/babel"></script>
 		<script src="/scripts/filter.js" type="text/babel"></script>
 		<script src="/scripts/control.js" type="text/babel"></script>

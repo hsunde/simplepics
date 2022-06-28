@@ -9,6 +9,7 @@ class Root extends React.Component {
             modal_src: null,
             area: null,
             page: 1,
+            user: null
         }
 
         this.perPage = 20;
@@ -18,6 +19,16 @@ class Root extends React.Component {
         this.handleHideFullscreen = this.handleHideFullscreen.bind(this);
         this.handleSizeChange = this.handleSizeChange.bind(this);
         this.handlePageChange = this.handlePageChange.bind(this);
+    }
+
+    componentDidMount() {
+        fetch("/username")
+        .then(result => result.text())
+        .then(result => {
+            this.setState({
+                user: result
+            })
+        })
     }
 
     handlePageChange(e) {
@@ -56,6 +67,7 @@ class Root extends React.Component {
         return (
             <div>
                 <Modal active={this.state.show_modal} src={this.state.modal_src} onHideFullscreen={this.handleHideFullscreen} />
+                <Header user={this.state.user} />
                 <Filter onFilterChange={this.handleFilterChange} />
                 <Control count={this.state.files.length} onSizeChange={this.handleSizeChange} />
                 <Content area={this.state.area} files={this.state.files} page={this.state.page} perPage={this.perPage} onFullscreen={this.handleFullscreen} />
