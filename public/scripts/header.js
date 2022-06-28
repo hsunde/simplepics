@@ -2,9 +2,9 @@ class HeaderUserControl extends React.Component {
     render() {
         if (this.props.user) {
             return [
-                <a key="upload" class="button" href="/upload">Upload</a>,
-                <a key="user" class="button" href={"/user/" + this.props.user}>{this.props.user}</a>,
-                <a key="logout" class="button" href="/logout">Log out</a>
+                <a key="upload" href="/upload">Upload</a>,
+                <a key="user" href={"/user/" + this.props.user}>{this.props.user}</a>,
+                <a key="logout" href="/logout">Log out</a>
             ]
         }
 
