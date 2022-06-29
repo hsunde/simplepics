@@ -16,7 +16,7 @@ class Modal extends React.Component {
 
         return (
             <div className="modal" onClick={() => this.handleHideFullscreen()}>
-                <img className="modal__media" src={"get/" + this.props.src}></img>
+                <img className="modal__media" src={"/file/get/" + this.props.src}></img>
                 <video className="modal__media" autoPlay muted loop playsInline></video>
             </div>
         );

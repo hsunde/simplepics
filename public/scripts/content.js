@@ -22,7 +22,7 @@ class ContentMedia extends React.Component {
         return (
             <article className="content" style={{width: x, margin: margin, borderRadius: radius}}>
                 <section className="content__media-wrapper">
-                    <img className="content__media" src={"/thumb/" + this.props.hash} onClick={() => this.handleFullscreen(this)} style={{borderRadius: radius}}></img>
+                    <img className="content__media" src={"/file/thumb/" + this.props.hash} onClick={() => this.handleFullscreen(this)} style={{borderRadius: radius}}></img>
                 </section>
                 {/* <section className="content__info"></section> */}
             </article>
