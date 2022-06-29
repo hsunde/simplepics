@@ -36,6 +36,7 @@ unless DB.table_exists?(:tags)
 		primary_key :id
 		foreign_key :file, :file
 		foreign_key :tag, :tag
+		# TODO UNIQUE(file, tag)
 	end
 end
 
