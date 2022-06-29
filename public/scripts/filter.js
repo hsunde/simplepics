@@ -95,7 +95,7 @@ class Filter extends React.Component {
 		this.handleFilterChange = this.handleFilterChange.bind(this);
 		this.handleOperatorChange = this.handleOperatorChange.bind(this);
 
-		fetch("/test/tags")
+		fetch("/tag/get")
 		.then(result => result.json())
 		.then(result => {
 			this.setState(
