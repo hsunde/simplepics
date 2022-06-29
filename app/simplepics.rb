@@ -8,6 +8,7 @@ class Simplepics < Sinatra::Base
 		enable :sessions
 		# set :session_secret, SecureRandom.hex(64)
 		set :session_secret, "lol"
+		set :method_override => true
 
 		set :views, 'app/views'
 		set :public_folder, 'public'
