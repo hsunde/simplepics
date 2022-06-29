@@ -4,9 +4,6 @@ class Simplepics < Sinatra::Base
 	end
 
 	get "/" do
-		@categories = get_categories()
-		session[:filter] = Filter::Active.new()
-
 		erb :index
 	end
 end
