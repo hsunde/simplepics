@@ -14,8 +14,8 @@ class Simplepics < Sinatra::Base
 	end
 
 	helpers do
-		def login_user(user)
-			session[:user] = user
+		def login_user(username)
+			session[:user] = username
 			session[:login_failed] = false
 			redirect "/"
 		end
@@ -27,7 +27,9 @@ class Simplepics < Sinatra::Base
 		end
 
 		def user_admin?
-			if session[:user] && session[:user].is_admin?
+			user = User[username: session[:user]]
+
+			if user && Admin[user: user[:id]]
 				return true
 			end
 		end	
