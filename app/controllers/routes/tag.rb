@@ -4,11 +4,7 @@ class Simplepics < Sinatra::Base
     end
 
     post "/tag/add" do
-        begin
-            Tag.create(name: params[:tag])
-        rescue Sequel::UniqueConstraintViolation
-            p "Tag exists"
-        end
+        Tag.find_or_create(name: params[:tag])
 
         return 200
     end

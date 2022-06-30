@@ -18,13 +18,7 @@ class Simplepics < Sinatra::Base
 
 	put "/file/tag/add" do
 		file = File_[params[:file_id]]
-
-		begin
-            tag = Tag.create(name: params[:tag])
-        rescue Sequel::UniqueConstraintViolation
-            tag = Tag[name: params[:tag]]
-        end
-
+		tag = Tag.find_or_create(name: params[:tag])
 		file.add_tag(tag)
 
 		return 200
@@ -89,12 +83,7 @@ class Simplepics < Sinatra::Base
 				file_record.update(x: size[0], y: size[1])
 
 				tags.each do |tag|
-					begin
-						tag = Tag.create(name: tag)
-					rescue Sequel::UniqueConstraintViolation
-						tag = Tag[name: tag]
-					end
-
+					tag = Tag.find_or_create(name: tag)
 					file_record.add_tag(tag)
 				end
 
