@@ -6,7 +6,7 @@ class Simplepics < Sinatra::Base
 	end
 
 	get "/admin/tag" do
-		@tags = get_categories()
+		@tags = get_tags()
 		erb :"admin/tag"
 	end
 

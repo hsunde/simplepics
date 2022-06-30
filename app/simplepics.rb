@@ -32,5 +32,16 @@ class Simplepics < Sinatra::Base
 				return true
 			end
 		end	
+
+		def get_tags()
+			categories = TagCategory.by_name
+
+			categories_with_tags = {}
+			categories.each do |category|
+				categories_with_tags[category[:name]] = Tag.where(tag_category: category).by_name
+			end
+		
+			return categories_with_tags
+		end
 	end	
 end

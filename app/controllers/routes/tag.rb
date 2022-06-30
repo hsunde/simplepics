@@ -1,7 +1,6 @@
 class Simplepics < Sinatra::Base
     get "/tag/get" do
-        tags = get_categories()
-        return tags.to_json
+        return get_tags().to_json
     end
 
     post "/tag/add" do
