@@ -38,7 +38,10 @@ class Simplepics < Sinatra::Base
 
 			categories_with_tags = {}
 			categories.each do |category|
-				categories_with_tags[category[:name]] = Tag.where(tag_category: category).by_name
+				categories_with_tags[category[:name]] = []
+				Tag.where(tag_category: category).each do |tag|
+					categories_with_tags[category[:name]] << tag.values
+				end
 			end
 		
 			return categories_with_tags
