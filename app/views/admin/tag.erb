@@ -20,11 +20,11 @@
 				data.append('tag', tag);
 				data.append('category', input.value);
 			
-				fetch('/admin/tags/change', {
+				fetch('/admin/tag/change_category', {
 					method: 'POST',
 					body: data
 				}).then(function(r) {
-					location = "/admin/tags";
+					location = "/admin/tag";
 				})
 			}
 		</script>

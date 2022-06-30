@@ -10,11 +10,14 @@ class Simplepics < Sinatra::Base
 		erb :"admin/tag"
 	end
 
-	# post "/admin/tag/change_category" do
-	# 	tag = params[:tag]
-	# 	category = params[:category]
+	post "/admin/tag/change_category" do
+		tag = params[:tag]
+		category = params[:category]
 
-	# 	Admin::Tags::update_category(params[:tag], params[:category])
-	# 	redirect "/admin/tags"
-	# end
+		tag_record = Tag[name: tag]
+		category_record = TagCategory.find_or_create(name: category)
+
+		category_record.add_tag(tag_record)
+		redirect "/admin/tags"
+	end
 end
