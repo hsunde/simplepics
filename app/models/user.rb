@@ -3,5 +3,5 @@ class User < Sequel::Model(DB[:user])
 end
 
 class Admin < Sequel::Model(DB[:admin])
-	one_to_one :user
+	one_to_one :user, key: :user
 end

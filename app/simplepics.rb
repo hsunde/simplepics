@@ -28,9 +28,7 @@ class Simplepics < Sinatra::Base
 		end
 
 		def user_admin?
-			user = User[username: session[:user]]
-
-			if user && Admin[user: user[:id]]
+			if User.association_join(:admin)[username: session[:user]]
 				return true
 			end
 		end	
